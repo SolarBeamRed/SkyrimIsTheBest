@@ -1,0 +1,145 @@
+@font-face {
+    font-family: 'RobotoCondensed';
+    src: url(fonts/Roboto-Condensed.ttf);
+}
+
+@font-face {
+    font-family: 'Balgruf';
+    src: url(fonts/Balgruf-JRye7.ttf);
+}
+
+body {
+    background-image:url(images/skyrim-bg1.jpg);
+    background-color: rgb(88, 88, 88);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position:center;
+    background-blend-mode: multiply;
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    box-sizing: border-box;
+}
+
+body *:not(audio)t {
+    margin: auto;
+    width: fit-content;
+}
+
+h1 {
+    font-family: 'RobotoCondensed', Verdana, Geneva, sans-serif;
+    text-decoration: none;
+    color: rgb(221, 221, 221);
+    font-size: 3em;
+} 
+
+h2 {
+    font-family: 'RobotoCondensed', Verdana, Geneva, sans-serif;
+    text-decoration: none;
+    color: lightgray;
+    font-size: 2.5em;
+} 
+
+h3 {
+    font-family: 'RobotoCondensed', Verdana, Geneva, sans-serif;
+    text-decoration: none;
+    color: lightgray;
+    font-size: 2em;
+} 
+
+h4 {
+    font-family: 'RobotoCondensed', Verdana, Geneva, sans-serif;
+    text-decoration: none;
+    color: lightgray;
+    font-size: 1.5em;
+} 
+
+h5 {
+    font-family: 'RobotoCondensed', Verdana, Geneva, sans-serif;
+    text-decoration: none;
+    color: lightgray;
+    font-size: 1.5em;
+} 
+
+p {
+    font-family: Balgruf, RobotoCondensed, Verdana, Geneva, sans-serif;
+    text-decoration: none;
+    color: lightgray;
+    font-size: 1.2em
+}
+
+a {
+    color: lightblue;
+    text-decoration: none;
+    font-family: Balgruf, RobotoCondensed, Verdana, Geneva, sans-serif;
+    font-size: 1.2em;
+}
+
+img {
+    border-radius: 2%;
+    box-shadow: 10px 10px 5px hsla(0, 0%, 0%, 0.637);
+}
+
+
+
+.gallery {
+    position: relative;
+    width: 750px;
+    margin: auto;
+}
+
+.slides {
+    position: relative;
+    width: 100%;
+    height: 450px;
+    box-shadow: 10px 10px 5px hsla(0, 0%, 0%, 0.637);
+    
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.5s, transform 0.3s ease-in-out;
+    border-radius: 5%;
+    z-index: 0;
+}
+
+#img1:checked ~ .slides .slide1,
+#img2:checked ~ .slides .slide2,
+#img3:checked ~ .slides .slide3,
+#img4:checked ~ .slides .slide4,
+#img5:checked ~ .slides .slide5 {
+    opacity: 1;
+    pointer-events: auto;
+    z-index: 1;
+}
+
+.slide:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.navigation {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.nav-dot {
+    display: inline-block;
+    width: 12px;
+    height: 12px;  
+    background-color: gray;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+input[type="radio"] {
+    display: none;
+}

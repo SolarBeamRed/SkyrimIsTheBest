@@ -165,3 +165,52 @@ document.addEventListener("DOMContentLoaded", () => {
         audioList.appendChild(player);
     });
 });
+
+// THEME SELECTION
+// Custom dropdown functionality
+const dropdown = document.querySelector('.custom-dropdown');
+const toggle = dropdown.querySelector('.dropdown-toggle');
+const menu = dropdown.querySelector('.dropdown-menu');
+const options = menu.querySelectorAll('li');
+const selectedTheme = dropdown.querySelector('.selected-theme');
+
+// Toggle menu visibility
+toggle.addEventListener('click', () => {
+  dropdown.classList.toggle('open');
+});
+
+// Close when clicking outside
+document.addEventListener('click', (e) => {
+  if (!dropdown.contains(e.target)) {
+    dropdown.classList.remove('open');
+  }
+});
+
+// Theme selection
+options.forEach(option => {
+  option.addEventListener('click', () => {
+    // Update selected theme text
+    selectedTheme.textContent = option.textContent;
+    
+    // Change CSS file
+    const themeFile = option.getAttribute('data-theme');
+    document.querySelector('link[href*="ost"]').href = `css/${themeFile}`;
+    
+    // Remember choice
+    localStorage.setItem('selectedTheme', themeFile);
+    
+    // Close dropdown
+    dropdown.classList.remove('open');
+  });
+});
+
+// Load saved theme
+const savedTheme = localStorage.getItem('selectedTheme');
+if (savedTheme) {
+  const themeName = [...options].find(opt => 
+    opt.getAttribute('data-theme') === savedTheme).textContent;
+  selectedTheme.textContent = themeName;
+  document.querySelector('link[href*="ost"]').href = `css/${savedTheme}`;
+}
+// THEME SELECTION END
+

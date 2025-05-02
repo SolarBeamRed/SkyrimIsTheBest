@@ -11,10 +11,10 @@
   
   /* Base Styles */
   body {
-    background-image: url('../images/skyrim-ost-bg.jpg');
-    background-color: #1a0000;
+    background-image: url('../images/skyrim-ost-bg-daedric.png');
+    background-color: #141414b2;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size:cover;
     background-attachment: fixed;
     background-position: center;
     background-blend-mode: multiply;
@@ -52,8 +52,8 @@
   
   /* Player Container */
   .player-container {
-    max-width: 75%;
-    margin: auto;
+    max-width: 60%;
+    /* margin: auto; */
     background: rgba(40, 0, 0, 0.5);
     border-radius: 10px;
     padding: 20px;
@@ -168,3 +168,76 @@
   .track-list::-webkit-scrollbar-thumb:hover {
     background: #e00000;
   }
+
+  /* THEME BUTTON CSS */
+/* Custom Dropdown Styles */
+.custom-dropdown {
+  float: right;
+  position: relative;
+  display: inline-block;
+  width: 200px;
+  margin: 10px;
+}
+
+.dropdown-toggle {
+  font-family: RobotoCondensed, Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1.045em;
+  width: 100%;
+  padding: 10px 15px;
+  background: rgba(30, 30, 30, 0.9);
+  color: #c00000; /* Changed color */
+  border: 1px solid #5a0000; /* Changed border color */
+  border-radius: 5px;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dropdown-toggle:hover {
+  background: rgba(40, 40, 40, 0.9);
+}
+
+.arrow {
+  font-size: 0.8em;
+  transition: transform 0.3s;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: rgba(30, 30, 30, 0.95);
+  border: 1px solid #5a0000; /* Changed border color */
+  border-top: none; /* Remove top border */
+  border-radius: 0 0 5px 5px;
+  list-style: none;
+  padding: 0;
+  margin: 0; /* Remove margin causing the line */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3s ease-out;
+}
+
+.custom-dropdown.open .dropdown-menu {
+  max-height: 300px;
+}
+
+.custom-dropdown.open .arrow {
+  transform: rotate(180deg);
+}
+
+.dropdown-menu li {
+  padding: 10px 15px;
+  color: #ffd0d0; /* Changed color */
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.dropdown-menu li:hover {
+  background: rgba(192, 0, 0, 0.2); /* Changed background color */
+  color: #c00000; /* Changed color */
+}

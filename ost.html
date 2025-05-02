@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Skyrim OST</title>
-    <link rel="stylesheet" href="css/ost-default-theme.css">
+    <link rel="stylesheet" href="css/ost-default-theme.css" id="theme-style">
     <link rel="icon" type="image/jpg" href="images/favicon.jpg">
 </head>
 <body>
@@ -12,6 +12,21 @@
         <h1> The Elder Scrolls V: Skyrim OST </h1>
         <p> The world waits when you play Skyrim music </p>
     </div>
+
+    <div class="custom-dropdown">
+        <button class="dropdown-toggle">
+          <span class="selected-theme">Classic Skyrim</span>
+          <span class="arrow">▼</span>
+        </button>
+        <ul class="dropdown-menu">
+          <li data-theme="ost-default-theme.css">Classic Skyrim</li>
+          <li data-theme="ost-nordic-winter.css">Nordic Winter</li>
+          <li data-theme="ost-daedric-red.css">Daedric Red</li>
+          <li data-theme="ost-ethereal-white.css">Ethereal White</li>
+          <li data-theme="ost-dwemer-brass.css">Dwemer Brass</li>
+          <li data-theme="ost-mage-purple.css">Mage Purple</li>
+        </ul>
+      </div>
 
     <div class="player-container">
         <div class="track-list" id="audio-list">

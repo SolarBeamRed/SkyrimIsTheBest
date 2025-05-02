@@ -11,8 +11,8 @@
   
   /* Base Styles */
   body {
-    background-image: url('../images/mage-college-bg.jpg');
-    background-color: #0d0a2a;
+    background-image: url('../images/skyrim-ost-bg-mage.jpg');
+    background-color: #0d0a2a96;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -52,8 +52,8 @@
   
   /* Player Container */
   .player-container {
-    max-width: 75%;
-    margin: auto;
+    max-width: 60%;
+    margin-left: 25px;
     background: rgba(40, 30, 90, 0.6);
     border-radius: 10px;
     padding: 20px;
@@ -177,3 +177,75 @@
   .track-list::-webkit-scrollbar-thumb:hover {
     background: #a78be0;
   }
+
+  /* Custom Dropdown Styles */
+.custom-dropdown {
+  float: right;
+  position: relative;
+  display: inline-block;
+  width: 200px;
+  margin: 10px;
+}
+
+.dropdown-toggle {
+  font-family: RobotoCondensed, Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1.045em;
+  width: 100%;
+  padding: 10px 15px;
+  background: rgba(30, 30, 30, 0.9);
+  color: #9370db; /* Changed color */
+  border: 1px solid #6a5acd; /* Changed border color */
+  border-radius: 5px;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dropdown-toggle:hover {
+  background: rgba(40, 40, 40, 0.9);
+}
+
+.arrow {
+  font-size: 0.8em;
+  transition: transform 0.3s;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: rgba(30, 30, 30, 0.95);
+  border: 1px solid #6a5acd; /* Changed border color */
+  border-top: none; /* Remove top border */
+  border-radius: 0 0 5px 5px;
+  list-style: none;
+  padding: 0;
+  margin: 0; /* Remove margin causing the line */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3s ease-out;
+}
+
+.custom-dropdown.open .dropdown-menu {
+  max-height: 300px;
+}
+
+.custom-dropdown.open .arrow {
+  transform: rotate(180deg);
+}
+
+.dropdown-menu li {
+  padding: 10px 15px;
+  color: #e6e6ff; /* Changed color */
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.dropdown-menu li:hover {
+  background: rgba(147, 112, 219, 0.2); /* Changed background color */
+  color: #9370db; /* Changed color */
+}

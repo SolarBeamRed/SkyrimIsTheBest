@@ -1,4 +1,4 @@
-const musicFolder = '../music/';
+const musicFolder = 'music/';
 const songFiles = [
     "Beneath the Ice.mp3",
     "Blood and Steel.mp3",

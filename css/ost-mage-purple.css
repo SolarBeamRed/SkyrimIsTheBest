@@ -1,0 +1,179 @@
+/* Fonts */
+@font-face {
+    font-family: 'RobotoCondensed';
+    src: url('../fonts/Roboto-Condensed.ttf');
+  }
+  
+  @font-face {
+    font-family: 'Balgruf';
+    src: url('../fonts/Balgruf-JRye7.ttf');
+  }
+  
+  /* Base Styles */
+  body {
+    background-image: url('../images/mage-college-bg.jpg');
+    background-color: #0d0a2a;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-blend-mode: overlay;
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh;
+    font-family: 'RobotoCondensed', sans-serif;
+    color: #e6e6ff;
+  }
+  
+  .skyrim-header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 20px;
+    background: rgba(30, 20, 80, 0.7);
+    border-radius: 10px;
+    border: 1px solid #6a5acd;
+    box-shadow: 0 0 20px rgba(106, 90, 205, 0.4);
+  }
+  
+  h1 {
+    font-family: 'Balgruf', 'RobotoCondensed', serif;
+    color: #9370db;
+    font-size: 3em;
+    margin: 0;
+    text-shadow: 0 0 10px rgba(147, 112, 219, 0.7);
+  }
+  
+  p {
+    font-family: 'Balgruf', 'RobotoCondensed', serif;
+    font-size: 1.5em;
+    margin: 10px 0 0;
+    color: #b19cd9;
+  }
+  
+  /* Player Container */
+  .player-container {
+    max-width: 75%;
+    margin: auto;
+    background: rgba(40, 30, 90, 0.6);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 25px rgba(106, 90, 205, 0.5);
+    border: 1px solid #7b68ee;
+    backdrop-filter: blur(5px);
+  }
+  
+  .track-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-height: 70vh;
+    overflow-y: auto;
+    padding-right: 10px;
+  }
+  
+  /* Track Card */
+  .track-card {
+    background: rgba(50, 40, 100, 0.8);
+    border-radius: 8px;
+    padding: 15px;
+    transition: all 0.4s ease;
+    border-left: 4px solid #9370db;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  .track-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 20px rgba(147, 112, 219, 0.4);
+    background: rgba(60, 50, 110, 0.9);
+  }
+  
+  .track-title {
+    font-family: 'Balgruf', serif;
+    color: #b19cd9;
+    margin: 0 0 10px;
+    font-size: 1.5em;
+    text-shadow: 0 0 5px rgba(179, 156, 217, 0.5);
+  }
+  
+  /* Controls */
+  .controls {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  
+  .controls button {
+    background: rgba(70, 60, 120, 0.8);
+    color: #e6e6fa;
+    border: none;
+    border-radius: 50%;
+    width: 38px;
+    height: 38px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  .controls button:hover {
+    background: #9370db;
+    color: #000;
+    transform: scale(1.1);
+  }
+  
+  .progress-container {
+    flex-grow: 1;
+    margin: 0 12px;
+  }
+  
+  .progress {
+    width: 100%;
+    height: 6px;
+    -webkit-appearance: none;
+    appearance: none;
+    background: rgba(100, 90, 150, 0.5);
+    border-radius: 3px;
+    outline: none;
+  }
+  
+  .progress::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #9370db;
+    cursor: pointer;
+    box-shadow: 0 0 5px rgba(147, 112, 219, 0.7);
+  }
+  
+  .time-display {
+    font-size: 0.9em;
+    color: #c9c0ff;
+    min-width: 85px;
+    text-align: center;
+    font-family: 'RobotoCondensed', sans-serif;
+  }
+  
+  /* Scrollbar */
+  .track-list::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  .track-list::-webkit-scrollbar-track {
+    background: rgba(30, 20, 80, 0.3);
+    border-radius: 4px;
+  }
+  
+  .track-list::-webkit-scrollbar-thumb {
+    background: #9370db;
+    border-radius: 4px;
+    box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
+  }
+  
+  .track-list::-webkit-scrollbar-thumb:hover {
+    background: #a78be0;
+  }
